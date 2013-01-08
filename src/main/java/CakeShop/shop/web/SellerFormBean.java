@@ -22,7 +22,7 @@ public class SellerFormBean implements Serializable {
 
 		private static final long serialVersionUID = 1L;
 
-		private Seller Seller = new Seller();
+		private Seller seller = new Seller();
 		private ListDataModel<Seller> sellers = new ListDataModel<Seller>();
 
 		@Inject
@@ -61,4 +61,4 @@ public class SellerFormBean implements Serializable {
 	}
 	
 	
-}
+
