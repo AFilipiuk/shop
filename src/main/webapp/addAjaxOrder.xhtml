@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+	<ui:define name="content">
+<BR/><BR/>
+		<h:form id="orderForm">
+			<h:panelGrid columns="2">
+
+				<h:outputText value="#{msg.orderClientLabel}" />
+				<h:inputText id="client" value="#{orderBean.order.client}"
+					required="#{true}" />
+
+				<h:outputText value="#{msg.orderTelLabel}" />
+				<h:inputText id="tel" value="#{orderBean.order.tel}">
+					<f:validateDoubleRange minimum="7"  />
+					<f:ajax execute="@this" render="messages beanState" />
+				</h:inputText>
+				
+				<h:outputText value="#{msg.orderAddressLabel}" />
+				<h:inputText id="address" value="#{orderBean.order.address}"
+					required="#{true}" />
+					
+					<h:outputText value="#{msg.orderZipCodeLabel}" />
+				<h:inputText id="zipCode" value="#{orderBean.order.zipCode}" />
+
+
+				<h:outputText value="#{msg.orderDOOLabel}" />
+				<rich:calendar value="#{personBean.person.dateOfBirth}"
+					id="doo" datePattern="dd.MM.yyyy" showApplyButton="#{true}"
+					cellWidth="24px" cellHeight="22px" style="width:200px">
+					<a4j:ajax render="messages" execute="@this" />
+				</rich:calendar>
+
+				<h:outputText value="#{msg.orderOrderLabel}" />
+
+					
+					<rich:select id="ordertxt" value="#{orderBean.order.ordertxt}"
+					required="#{true}">
+                <f:selectItem itemValue="tort" itemLabel="tort" />
+                <f:selectItem itemValue="muffiny" itemLabel="muffiny" />
+                <f:selectItem itemValue="ciasto" itemLabel="ciasto" />
+                <f:selectItem itemValue="ciastka" itemLabel="ciastka" />
+                <f:selectItem itemValue="zamówienie specjalne" itemLabel="zamówienie specjalne" />
+            </rich:select>
+		
+				<h:outputText value="#{msg.orderOrderInfoLabel}" />
+				<h:inputTextarea id="orderInfo" rows="5" cols="18" value="#{orderBean.order.orderInfo}"
+					required="#{true}"/>
+				
+				<h:outputText value="#{msg.orderQuantityLabel}" />
+				<h:inputText id="qua" value="#{orderBean.order.quantity}">
+
+				</h:inputText>
+
+			</h:panelGrid>
+
+			<h:commandButton value="#{msg.orderFormOKButton}"
+				action="#{orderBean.addOrder}" />
+
+
+			<h:panelGrid>
+				<h:messages id="messages" showDetail="#{true}"
+					showSummary="#{false}" />
+			</h:panelGrid>
+
+			<h:panelGrid id="beanState" columns="2">
+				<h:outputText value="#{msg.orderClientLabel}" />
+				<h:outputText id="clientOutput" value="#{orderBean.order.client}" />
+
+				<h:outputText value="#{msg.orderTelLabel}" />
+				<h:outputText id="telOutput" value="#{orderBean.order.tel}" />
+
+				<h:outputText value="#{msg.orderDOOLabel}" />
+				<h:outputText id="dooOutput"
+					value="#{orderBean.order.dateOfOrder}" />
+			</h:panelGrid>
+
+		</h:form>
+	</ui:define>
+</ui:composition>

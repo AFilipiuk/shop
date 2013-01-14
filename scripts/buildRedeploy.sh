@@ -1,8 +1,8 @@
 #!/bin/sh
 
 echo "************ UNDEPLOYING *******************"
-asadmin undeploy jsfdemo
+asadmin undeploy CakeShop
 echo "************ BUILDING **********************"
 mvn package
 echo "************ DEPLOYING *********************"
-asadmin deploy target/shop.war
+asadmin deploy target/CakeShop.war

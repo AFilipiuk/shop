@@ -1,49 +1,56 @@
 body {
    margin: 0;
    padding: 0;
-   background-color:  lightGray;
+background-image:url(http://img152.imageshack.us/img152/1369/tlob.jpg);   
+   background-repeat:repeat;
+   background-color: #FFE4B5;
    font-family: Verdana, sans-serif;
    font-size: 0.9em;
 }
 
 .heading {
-  padding: 10px;
-  background: #FFFFFF;
-  border: 1px solid blue;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: black;
+  border: none;
   font-size: 1.4em;
-  font-style: italic;
-  font-family: Verdana;
+  font-family: Arial;
   text-align: center;
-  height: 50px;
+  height: 249px;
+  width: 811px;
 }
 
 .menuAndContent {
-  width: 100%;
-  height: 100%;
-}
+  margin: auto;
+	width: 811px;
+  padding-bottom: 250px;
 
+ 
+  
+}
+    
 .menu {
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  border: thin solid blue;
-  position: absolute;
-  left: 10px;
-  height: 80%;
-  width: 200px;
-  background: #FFFFFF;
-  top: 90px;
+
+	float: left;
+	min-height: 600px;
+	overflow: hidden;
+	width: 200px;
+	background: white;
+	
+
+  
 }
 
 .content {
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  border: thin solid blue;
-  background: #FFFFFF;	
-  position:absolute;
-  left: 225px; 
-  right: 65px;
-  top: 90px;
-  height: 80%;
+	margin: 1px auto 0;
+	min-height: 600px;
+	overflow: hidden;
+	width: 611px;
+  background: white;	
+  
+}
+.image{
+	background-image:baner.png;
 }
