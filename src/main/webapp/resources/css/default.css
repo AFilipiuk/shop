@@ -1,7 +1,7 @@
 body {
    margin: 0;
    padding: 0;
-background-image:url(http://img152.imageshack.us/img152/1369/tlob.jpg);   
+	 background-image: url(../resources/images/tlo.jpg);   
    background-repeat:repeat;
    background-color: #7AC5CD;
    font-family: Verdana, sans-serif;
