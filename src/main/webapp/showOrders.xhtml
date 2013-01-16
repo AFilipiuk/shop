@@ -6,10 +6,10 @@
 	template="/templates/default.xhtml">
 	
 	<ui:define name="content">
-	
+	<BR/><BR/>
     <h:form>
     
-     <h:dataTable value="#{orderBean.allOrders}" var="item" style="text-align: center;">
+     <h:dataTable value="#{orderBean.allOrders}" var="item" size="600px" style="text-align: center;">
       <f:facet name="header">#{msg.orderAllLabel}</f:facet>
       
       <h:column>
