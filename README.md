@@ -1,7 +1,7 @@
 shop
 ====
 
-Projekt semestralny: CakeShop
+Projekt semestralny z JAZ: CakeShop
 
 projekt w JSF
 
